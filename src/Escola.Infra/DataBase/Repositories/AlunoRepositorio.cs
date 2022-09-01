@@ -14,22 +14,9 @@ namespace Escola.Infra.DataBase.Repositories
         {
             _contexto = contexto;
         }
-
-        public void Atualizar(Aluno aluno)
-        {
-            _contexto.Alunos.Update(aluno);
-            _contexto.SaveChanges();
-        }
-
         public void Excluir(Aluno aluno)
         {
-            _contexto.Alunos.Remove(aluno);
-            _contexto.SaveChanges();
-        }
-
-        public bool ExisteMatricula(int matricula)
-        {
-            return _contexto.Alunos.Any(x => x.Matricula == matricula);
+            throw new NotImplementedException();
         }
 
         public void Inserir(Aluno aluno)
@@ -40,12 +27,12 @@ namespace Escola.Infra.DataBase.Repositories
 
         public Aluno ObterPorId(Guid id)
         {
-            return _contexto.Alunos.Find(id);
+            throw new NotImplementedException();
         }
 
         public IList<Aluno> ObterTodos()
         {
-            return _contexto.Alunos.ToList();
+            throw new NotImplementedException();
         }
     }
 }
